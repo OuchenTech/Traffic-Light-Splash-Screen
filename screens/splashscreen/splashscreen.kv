@@ -1,0 +1,82 @@
+<TrafficLightLayout>
+    canvas:
+        Color:
+            rgba: root.bg_color
+        Ellipse:
+            size: self.size
+            pos: self.pos
+
+
+
+<RoundedLayout@MDBoxLayout>
+    canvas:
+        Color:
+            rgba: 43/255, 44/255, 44/255, 1
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [20, 20, 20, 20]
+
+
+<SplashScreen>
+
+    MDFloatLayout:
+        size: root.width, root.height
+        md_bg_color: '#beeafc'
+        
+        MDFloatLayout:
+            size_hint: 1, .1
+            pos_hint: {'center_x': .5, 'center_y': .05}
+            md_bg_color: 'black'
+            
+        MDBoxLayout:
+            size_hint: None, .4
+            width: self.height
+            pos_hint: {'center_x': .6, 'center_y': .3}
+            FitImage:
+                source: 'images/car.png'
+                
+        MDBoxLayout:
+            size_hint: None, .26
+            width: self.height
+            pos_hint: {'center_x': .75, 'center_y': .86}
+            FitImage:
+                source: 'images/sun.png'
+        
+        MDFloatLayout:
+            size_hint: .03, .4
+            pos_hint: {'center_x': .2, 'center_y': .3}
+            md_bg_color: '#595a5d'   
+            
+        RoundedLayout:
+            orientation: 'vertical'
+            size_hint: .19, .3
+            pos_hint: {'center_x': .2, 'center_y': .65}    
+            padding: 10
+            spacing: 10
+            
+            TrafficLightLayout:
+                id: light1
+                size_hint: None, .24
+                width: self.height
+            TrafficLightLayout:
+                id: light2
+                size_hint: None, .24
+                width: self.height
+            TrafficLightLayout:
+                id: light3
+                size_hint: None, .24
+                width: self.height
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
